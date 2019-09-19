@@ -56,7 +56,7 @@ let body = document.querySelectorAll('body');
 
     canvas2.setAttribute("id", "canvas2");
     canvas2.setAttribute("width", width);
-    canvas2.setAttribute("height", height);
+    // canvas2.setAttribute("height", height);
 
     body[0].appendChild(canvas2);
 
