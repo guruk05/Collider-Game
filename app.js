@@ -62,9 +62,6 @@ let body = document.querySelectorAll('body');
 
     let game = canvas2.getContext("2d");
 
-    game.translate(
-        Math.round((width - cellWidth * cellSize - (cellWidth + 1) * cellSpacing) / 2),
-        Math.round((height - cellHeight * cellSize - (cellHeight + 1) * cellSpacing) / 2)
-    );
+    
 
     
