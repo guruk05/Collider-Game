@@ -52,7 +52,7 @@ let body = document.querySelectorAll('body');
 
 
 
-    let canvas2 = document.createElement('canvas');
+    // let canvas2 = document.createElement('canvas');
 
  
     body[0].appendChild(canvas2);
