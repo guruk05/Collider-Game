@@ -37,8 +37,8 @@ let body = document.querySelectorAll('body');
     let canvas = document.createElement('canvas');
 
     canvas.setAttribute("id", "canvas");
-    canvas.setAttribute("width", width);
-    canvas.setAttribute("height", height);
+    // canvas.setAttribute("width", width);
+    // canvas.setAttribute("height", height);
 
     body[0].appendChild(canvas);
 
