@@ -42,7 +42,7 @@ let body = document.querySelectorAll('body');
 
     body[0].appendChild(canvas);
 
-    let context = canvas.getContext("2d");
+    // let context = canvas.getContext("2d");
 
 
     context.translate(
