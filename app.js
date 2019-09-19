@@ -22,7 +22,7 @@ let body = document.querySelectorAll('body');
 
     let layout = [],
         fronteirTest = [];
-// Determines the size of the blocks 
+Determines the size of the blocks 
     let cellSize = 16,
         cellSpacing = 8,
         cellWidth = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)),
@@ -37,12 +37,12 @@ let body = document.querySelectorAll('body');
     let canvas = document.createElement('canvas');
 
     canvas.setAttribute("id", "canvas");
-    // canvas.setAttribute("width", width);
-    // canvas.setAttribute("height", height);
+    canvas.setAttribute("width", width);
+    canvas.setAttribute("height", height);
 
     body[0].appendChild(canvas);
 
-    // let context = canvas.getContext("2d");
+    let context = canvas.getContext("2d");
 
 
     context.translate(
@@ -52,7 +52,7 @@ let body = document.querySelectorAll('body');
 
 
 
-    // let canvas2 = document.createElement('canvas');
+    let canvas2 = document.createElement('canvas');
 
  
     body[0].appendChild(canvas2);
