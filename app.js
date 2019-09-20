@@ -1,64 +1,218 @@
-let w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0];
-
-let x = w.innerWidth || e.clientWidth || g.clientWidth,
-        y = w.innerHeight || e.clientHeight || g.clientHeight;
-
-let width = x - 16,
-    height = y - 16;
-    
-
-let currentPosition; 
-
-let N = 1 << 0, 
-    S = 1 << 1,
-    W = 1 << 2,
-    E = 1 << 3;
+var canvas=document.getElementById("myCanvas");
+var ctx=canvas.getContext("2d");
  
-let body = document.querySelectorAll('body');
-
-
-    let layout = [],
-        fronteirTest = [];
-Determines the size of the blocks 
-    let cellSize = 16,
-        cellSpacing = 8,
-        cellWidth = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)),
-        cellHeight = Math.floor((height - cellSpacing) / (cellSize + cellSpacing)),
-        cells = new Array(cellWidth * cellHeight), // each cell’s edge bits
-        frontier = [];
-
-    let maxY = Math.floor((height - cellSpacing) / (cellSize + cellSpacing)) - 1,
-        maxX = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)) - 1;
-
-
-    let canvas = document.createElement('canvas');
-
-    canvas.setAttribute("id", "canvas");
-    canvas.setAttribute("width", width);
-    canvas.setAttribute("height", height);
-
-    body[0].appendChild(canvas);
-
-    let context = canvas.getContext("2d");
-
-
-    context.translate(
-        Math.round((width - cellWidth * cellSize - (cellWidth + 1) * cellSpacing) / 2),
-        Math.round((height - cellHeight * cellSize - (cellHeight + 1) * cellSpacing) / 2)
-    );
-
-
-
-    let canvas2 = document.createElement('canvas');
-
+var x=canvas.width/2;
+var y=canvas.height-80;
+var paddleHeight=10;
+var paddleWidth=75;
+var paddleX=(canvas.width-paddleWidth)/2;
+var rightPressed=false;  // Whether right control button is pressed
+var leftPressed=false;  // Whether left control button is pressed
+var ballRadius=10;
+var brickRowCount=2;
+var brickColumnCount=5;
  
-    body[0].appendChild(canvas2);
+var count=brickRowCount*brickColumnCount;
+var rem=count;
+ 
+var brickWidth=80;
+var brickHeight=20;
+var brickPadding=7;
+var brickOffsetTop=30;
+var brickOffsetLeft=40;
+var speedup1=0;
+var speedup2=0; 
+var bricks=[];
+for(c=0;c<brickColumnCount;++c){
+  bricks[c]=[];
+  for(r=0;r<brickRowCount;++r){
+    bricks[c][r]={x:0,y:0,status:1};
+  }
+ 
+}
+ 
+var dx=3.5;
+var dy=-3.5;
+ 
+function drawBall(){
+ 
+  ctx.beginPath();
+  ctx.arc(x,y,ballRadius,0,Math.PI*2);
+  ctx.fillStyle="#fff";
+  ctx.fillStroke="#fff";
+  ctx.stroke="10";
+  ctx.fill();
+  ctx.closePath();
+}
+ 
+function drawPaddle(){
+ 
+  ctx.beginPath();
+  ctx.rect(paddleX,canvas.height-paddleHeight,paddleWidth,paddleHeight);
+  ctx.fillStyle="#00ffff";
+  ctx.fill();
+  ctx.closePath();
+ 
+}
+ 
+function drawBricks(){
+ 
+  for(c=0;c<brickColumnCount;++c){
+    for(r=0;r<brickRowCount;++r){
+       if(bricks[c][r].status==1){
+ 
+         var brickX=(c*(brickWidth+brickPadding))+brickOffsetLeft;
+         var brickY=(r*(brickHeight+brickPadding))+brickOffsetTop;
+         bricks[c][r].x=brickX;
+         bricks[c][r].y=brickY;
+         ctx.beginPath();
+         ctx.rect(brickX,brickY,brickWidth,brickHeight);
+         if(c%2!=0)
+           ctx.fillStyle="#fff";
+         else
+           ctx.fillStyle="#C2AA83";
+         ctx.fill();
+         ctx.closePath();
+ 
+      }
+    }
+  }
+ 
+}
+function collisionDetection(){
+ 
+  for(c=0;c<brickColumnCount;++c){
+ 
+    for(r=0;r<brickRowCount;++r){
+ 
+       var b=bricks[c][r];  
+ 
+       if(b.status==1){
+ 
+          if(x>b.x && x<b.x+brickWidth && y>b.y && y<b.y+brickHeight){
+             var snd=new Audio;
+             snd.play();
+             dy=-dy;
+             b.status=0;
 
-    let game = canvas2.getContext("2d");
+              /*** If count of total bricks decreases to 30
+                  Increase the speed of ball ***/
+                  if(count<=(rem-rem/7) && speedup1==0){
+                    if(dy<0)
+                      dy-=0.5;
+                    else
+                      dy+=0.5;
+                    if(dx<0)
+                     dx-=0.5;
+                    else
+                      dx+=0.5;
+                    paddleWidth+=2;
+                    speedup1=1;
+                 }
 
-    
-
-    
+                  if(count<=7){
+ 
+                     alert("You WON!!! Good job champ!");
+                     document.location.reload();
+                  }
+          }
+ 
+      }
+ 
+    }
+ 
+  }
+ 
+}
+ 
+function drawScore(){
+ 
+   ctx.font="18px Arial";
+   ctx.fillStyle="#fff";
+}
+ 
+function drawLives() {
+    ctx.font = "18px Arial";
+    ctx.fillStyle = "#fff";
+}
+ 
+function draw(){
+ 
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    drawBricks();
+    drawBall();
+    drawPaddle();
+    drawScore();
+    drawLives();
+ 
+    collisionDetection();
+ 
+ 
+    if(y+dy<ballRadius)
+      dy=-dy;
+    else if(y+dy>canvas.height-ballRadius){
+ 
+       if(x>=paddleX && x<=paddleX+paddleWidth){
+ 
+          var snd=new Audio("./music/paddleBall2.wav");
+          snd.play();
+          dy=-dy;
+ 
+      }
+    }
+    else
+      y+=dy;
+ 
+    if(x+dx<ballRadius || x+dx>canvas.width-ballRadius)
+       dx=-dx;
+    else
+       x+=dx;
+ 
+    if(rightPressed && paddleX<canvas.width-paddleWidth)
+       paddleX+=7;
+    else if(leftPressed && paddleX>0)
+       paddleX-=7;
+ 
+ 
+ 
+}
+ 
+function keyDownHandler(e){
+ 
+  if(e.keyCode==39)
+    rightPressed=true;
+  else if(e.keyCode==37)
+    leftPressed=true;
+ 
+ 
+}
+ 
+function keyUpHandler(e){
+ 
+   if(e.keyCode==39)
+    rightPressed=false;
+   if(e.keyCode==37)
+     leftPressed=false;
+ 
+}
+ 
+function mouseMoveHandler(e){
+ 
+  var relativeX=e.clientX-canvas.offsetLeft;
+ 
+  if(relativeX>0 && relativeX<canvas.width){
+ 
+     if((relativeX-paddleWidth/2>=0) && (relativeX-paddleWidth/2<=(canvas.width-paddleWidth)))
+        paddleX=relativeX-paddleWidth/2;
+ 
+  }
+ 
+ 
+}
+ 
+document.addEventListener("keydown",keyDownHandler,false);
+document.addEventListener("keyup",keyUpHandler,false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
+ 
+ 
+setInterval(draw,20);
