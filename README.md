@@ -27,7 +27,7 @@
   
 
  
-  [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/BFhzkVC4PZ0)
+  [![Watch the video](http://i3.ytimg.com/vi/BFhzkVC4PZ0/hqdefault.jpg)](https://youtu.be/BFhzkVC4PZ0)
   
   
 # Rules: 
