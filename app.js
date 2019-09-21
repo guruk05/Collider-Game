@@ -29,29 +29,29 @@
    
        /*----------------------------------------------------------------------------------*/
          // var score = 0; 
-         var canvas = document.getElementById("myCanvas");
-         var ctx = canvas.getContext("2d");
-         var a=80,b=40,c=30,d=18,e=80,f=210,g=140,h=250;
-         var x = canvas.width/2;
-         var y = canvas.height-30;
-         var paddleHeight = 41;
-         var paddleWidth = 50;
-         var paddleX = (canvas.width-paddleWidth)/2;
-         var paddleY = canvas.height-paddleHeight;
-         var rightPressed = false;
-         var leftPressed = false;
-         var upPressed = false;
-         var isCrash = false;
-         var dx = 2;
-         var dy = -2;
-         var da = 8;
-         var db = 2;
-         var dc = 4;
-         var dd = 8;
-         var de = 4;
-         var df = 2;
-         var dg = 4;
-         var dh = 2;
+         let canvas = document.getElementById("myCanvas");
+         let ctx = canvas.getContext("2d");
+         let a=80,b=40,c=30,d=18,e=80,f=210,g=140,h=250;
+         let x = canvas.width/2;
+         let y = canvas.height-30;
+         let paddleHeight = 41;
+         let paddleWidth = 50;
+         let paddleX = (canvas.width-paddleWidth)/2;
+         let paddleY = canvas.height-paddleHeight;
+         let rightPressed = false;
+         let leftPressed = false;
+         let upPressed = false;
+         let isCrash = false;
+         let dx = 2;
+         let dy = -2;
+         let da = 31;
+         let db = 31;
+         let dc = 25;
+         let dd = 25;
+         let de = 23;
+         let df = 23;
+         let dg = 17;
+         let dh = 8;
          
          document.addEventListener("keydown", keyDownHandler, false);
          document.addEventListener("keyup", keyUpHandler, false);
@@ -80,7 +80,7 @@
             ctx.beginPath();
             // ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
             ctx.rect(paddleX, paddleY, paddleWidth, paddleHeight);
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "red";
             ctx.fill();
             ctx.closePath();
          }
