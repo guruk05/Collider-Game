@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid {
+   width: 100vw;
+    height: 100vh;
+    background-position: center;
+}
+h1{
+    font-size: 7vw;
+    margin-top: 10vh;
+    padding-left: 17vw;
+    font-family: Berkshire Swash;
+    margin-left: 15vw;
+}
+   
+.btn {
+    font-size: 3vw;
+    padding: 1vh 4vw;
+    border-radius:14px;
+    margin-top: 25vh;
+    margin-left: 43vw;
+}
+
+@media only screen and(max-width:400px){
+   .row p{
+        padding-top: 30vh;
+        }
+}  
