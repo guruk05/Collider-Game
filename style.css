@@ -1,4 +1,5 @@
- body{
+
+      body{
         background-color:#fff;
         }
         #myCanvas
@@ -6,9 +7,12 @@
         display: block;
         margin: 0 auto;
         margin-top:10px;
-        background-color:#02383c;
+        /* background-color:#fff7f7; */
+        background-image: url("black-background-gif-11.gif");
+        background-repeat: no-repeat;
+        background-position: center;
         border-radius: 10px;
         border-bottom:35px solid #af0404;
         box-shadow: 3px 3px 0px #888888;
         padding-top:25px;
-        }
+        } 
