@@ -1,2 +1,3 @@
 # Game
-A simple Game developed using JavaScript
+A simple Game developed using Canvas .
+
