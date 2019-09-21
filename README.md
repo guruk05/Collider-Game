@@ -26,7 +26,6 @@
 # Game Preview 
   
 
-  
   [![Watch the video](http://i3.ytimg.com/vi/BFhzkVC4PZ0/maxresdefault.jpg)](https://youtu.be/BFhzkVC4PZ0)
 
   
