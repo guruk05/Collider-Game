@@ -118,63 +118,161 @@
           // collision detect for last bar - h
           if((390 < (paddleY+paddleHeight) && (390+20) >= paddleY)) {
              if(h < (paddleX+paddleWidth) && (h+100) >= paddleX) {
-               confirm("Reload pls!");
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
+              //  confirm("Reload pls!");
+              //  location.reload();
              }
           }
           // collision detect for bar - g
           if((340 < (paddleY+paddleHeight) && (340+20) >= paddleY)) {
              if(g < (paddleX+paddleWidth) && (g+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
          //  collision detect for bar - f
           if((290 < (paddleY+paddleHeight) && (290+20) >= paddleY)) {
              if(f < (paddleX+paddleWidth) && (f+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
           //  collision detect for bar - e
           if((240 < (paddleY+paddleHeight) && (240+20) >= paddleY)) {
              if(e < (paddleX+paddleWidth) && (e+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
           //  collision detect for bar - d
           if((190 < (paddleY+paddleHeight) && (190+20) >= paddleY)) {
              if(d < (paddleX+paddleWidth) && (d+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
            //  collision detect for bar - c
-           if((190 < (paddleY+paddleHeight) && (190+20) >= paddleY)) {
+           if((140 < (paddleY+paddleHeight) && (140+20) >= paddleY)) {
              if(c < (paddleX+paddleWidth) && (c+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
           //  collision detect for bar - b
           if((100 < (paddleY+paddleHeight) && (100+20) >= paddleY)) {
              if(b < (paddleX+paddleWidth) && (b+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
    
           // collision detect for bar - a
           if((40 < (paddleY+paddleHeight) && (40+20) >= paddleY)) {
              if(a < (paddleX+paddleWidth) && (a+100) >= paddleX) {
-               alert('You lost the game lol...Try again loser!!');
-               location.reload();
+              Swal.fire({
+                title: `SORRY,
+                        YOU JUST LOST THE GAME` ,
+                text: "Please play again !",
+                type: 'warning',
+                // showCancelButton: true,
+                confirmButtonColor: '#44000d',
+                // cancelButtonColor: '#d33',
+                confirmButtonText: 'Play Again'
+              }).then((result) => {
+                if (result.value) {
+                  location.reload();
+                }
+              })
              }
           }
           
@@ -253,7 +351,7 @@
   //  })
 
 
-               alert('yay you have won');
+              //  alert('yay you have won');
                Swal.fire({
                  title: `HOOO HOOOO HOOOOO ,
                          YOU WON THE GAME` ,
