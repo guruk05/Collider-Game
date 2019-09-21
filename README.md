@@ -16,7 +16,7 @@
 
 # Design:
   
-  ![designr1.PNG](designr1.png)
+  ![designr1.PNG](designr1.PNG)
              
 
 Test Image 2("designr1.png")
