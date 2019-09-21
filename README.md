@@ -17,6 +17,10 @@
 # Design:
   
   ![designr1.PNG](designr1.PNG)
+  
+  ![designr2.PNG](designr2.PNG)
+  
+  ![designr3.PNG](designr3.PNG)
              
 
 
