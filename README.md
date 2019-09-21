@@ -27,7 +27,7 @@
   
   GAME preview
   
-  [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/embed/NlVDZLanTY4)
+  [![Watch the video](designr1.PNG)](https://www.youtube.com/embed/NlVDZLanTY4)
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/NlVDZLanTY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
              
