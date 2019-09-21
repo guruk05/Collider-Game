@@ -1,4 +1,4 @@
-#COLLIDER 
+# COLLIDER 
 
 # Game
   A simple Game developed using Canvas .
