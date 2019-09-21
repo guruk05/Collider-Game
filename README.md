@@ -1,6 +1,5 @@
-# COLLIDER 
 
-# Game
+# COLLIDER GAME
   A simple Game developed using Canvas .
 
 # Author: 
