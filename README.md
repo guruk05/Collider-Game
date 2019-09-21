@@ -1,3 +1,5 @@
+#COLLIDER 
+
 # Game
   A simple Game developed using Canvas .
 
@@ -21,6 +23,8 @@
   ![designr2.PNG](designr2.PNG)
   
   ![designr3.PNG](designr3.PNG)
+  
+# Game Preview 
              
 
 
