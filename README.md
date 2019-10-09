@@ -7,10 +7,10 @@
   #### <a href="https://github.com/SudheerReddySingam">Sudheer Reddy</a>
 
 # Developed Using:
-  #### HTML
-  #### BOOTSTRAP
-  #### CSS 
-  #### JAVASCRIPT
+  #### <a href="https://html.com/">HTML</a>
+  #### <a href="https://getbootstrap.com/">BOOTSTRAP</a>
+  #### <a href="https://css-tricks.com/">CSS </a>
+  #### <a href="https://www.javascript.com/">JAVASCRIPT </a>
 
 # Description:
   #### This is a single player game, which involves escaping from the obstacles and reaching the final top point.
