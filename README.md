@@ -1,6 +1,6 @@
 
 # COLLIDER GAME
-  A simple Game developed using Canvas .
+  A Game developed using Canvas .
 
 ## Author: 
   #### <a href="https://github.com/guruk05">Guru Prasath</a>
