@@ -3,8 +3,7 @@
   A Game developed using Canvas .
 
 ## Author: 
-  #### <a href="https://github.com/guruk05">Guru Prasath</a>
-  #### <a href="https://github.com/SudheerReddySingam">Sudheer Reddy</a>
+ * #### <a href="https://github.com/guruk05">Guru Prasath</a>
 
 ## Developed Using:
  * #### <a href="https://html.com/">HTML</a>
